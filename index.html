@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StzyWorks | AI Specialist</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Inter:wght@300;400;600&display=swap');
 
         :root {
-            --bg: #050505;
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --accent: #00f2ff;
-            --text-main: #ffffff;
-            --text-dim: #a0a0a0;
+            --bg: #030303; /* Deeper Black for professional depth */
+            --card-bg: rgba(255, 255, 255, 0.02); /* More subtle, less hazy blur */
+            --accent: #00e0ff; /* Precision cyan */
+            --text-main: #f0f0f0; /* Less harsh white */
+            --text-dim: #909090; /* Proper dimming */
         }
 
         * {
@@ -25,74 +25,92 @@
             background-color: var(--bg);
             color: var(--text-main);
             font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
+            letter-spacing: -0.01em; /* Subtly tighten Inter for professionalism */
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1300px; /* Slightly wider for better breathing room */
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 50px; /* Consistent side padding */
         }
 
-        /* --- NAVIGATION --- */
+        /* --- PROFESSIONAL HEADER --- */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 30px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Subtle dividing line */
         }
 
         .logo {
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 700;
-            font-size: 1.5rem;
-            letter-spacing: -1px;
+            font-size: 1.6rem;
+            letter-spacing: -1.5px; /* Tighter for brand lockup */
             background: linear-gradient(90deg, #fff, var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* --- HERO SECTION --- */
+        .nav-meta {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* --- HERO SECTION - Precision spacing and align --- */
         .hero {
-            height: 80vh;
+            height: 90vh; /* More presence */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
+            padding-bottom: 100px; /* Adjusting the center */
         }
 
         .hero span {
             font-family: 'Space Grotesk', sans-serif;
             color: var(--accent);
             text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 0.8rem;
-            margin-bottom: 10px;
+            letter-spacing: 5px; /* Precision tracking */
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            font-weight: 500;
         }
 
         .hero h1 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(3rem, 8vw, 6rem);
-            line-height: 0.9;
-            margin-bottom: 25px;
+            font-size: clamp(3.5rem, 7.5vw, 6.5rem);
+            line-height: 0.92;
+            margin-bottom: 30px;
             font-weight: 700;
+            letter-spacing: -2px; /* Professional kerning */
+        }
+
+        .hero h1 span.light {
+            font-weight: 300; /* Contrast font-weight for complexity */
+            color: #ddd;
         }
 
         .hero p {
-            max-width: 550px;
+            max-width: 580px; /* Controlled width */
             color: var(--text-dim);
-            font-size: 1.1rem;
-            margin-bottom: 40px;
+            font-size: 1.15rem;
+            margin-bottom: 50px;
+            line-height: 1.6;
         }
 
-        /* --- BUTTONS --- */
+        /* --- BUTTONS - Perfect alignment and shape --- */
         .btn {
-            padding: 15px 35px;
+            padding: 16px 36px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-            font-size: 0.9rem;
+            transition: 0.35s cubic-bezier(0.1, 0.9, 0.2, 1); /* Professional easing */
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
         }
 
         .btn-primary {
@@ -101,73 +119,88 @@
         }
 
         .btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px); /* Subtle up movement, not just scaling */
+            box-shadow: 0 10px 40px rgba(255, 255, 255, 0.15);
         }
 
-        /* --- SKILLS SECTION --- */
+        /* --- SKILLS SECTION - Cleaner cards --- */
+        .work {
+            padding: 120px 0; /* Clear sectioning */
+        }
+
         .section-title {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 2rem;
-            margin-bottom: 50px;
+            font-size: 2.2rem;
+            margin-bottom: 60px;
+            letter-spacing: -1px;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 20px;
-            margin-bottom: 100px;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 25px; /* Consistent gaps */
         }
 
         .skill-card {
             background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.04); /* More subtle border */
+            padding: 45px;
             border-radius: 20px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(8px); /* Less hazy, more precision */
             transition: 0.3s;
         }
 
         .skill-card:hover {
-            border-color: var(--accent);
-            background: rgba(0, 242, 255, 0.02);
+            border-color: rgba(0, 224, 255, 0.1); /* Very subtle hover accent */
+            background: rgba(0, 224, 255, 0.005);
+            transform: translateY(-2px);
         }
 
         .skill-card h3 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-size: 1.6rem;
+            margin-bottom: 18px;
+            font-weight: 600;
         }
 
         .skill-card p {
             color: var(--text-dim);
-            font-size: 0.95rem;
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
         .badge {
             display: inline-block;
-            padding: 5px 12px;
-            border-radius: 5px;
-            background: rgba(0, 242, 255, 0.1);
+            padding: 6px 14px;
+            border-radius: 6px;
+            background: rgba(0, 224, 255, 0.08);
             color: var(--accent);
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         /* --- FOOTER --- */
         footer {
-            padding: 60px 0;
+            padding: 80px 0 60px; /* Better spacing */
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             text-align: center;
             color: var(--text-dim);
-            font-size: 0.8rem;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
         }
 
+        /* --- RESPONSIVE ADJUSTMENTS --- */
         @media (max-width: 768px) {
-            .container { padding: 0 20px; }
-            .hero h1 { font-size: 3.5rem; }
+            .container { padding: 0 30px; }
+            .hero { align-items: center; text-align: center; padding-bottom: 50px;}
+            .hero h1 { font-size: 3.5rem; letter-spacing: -1.5px;}
+            .hero p { text-align: center; }
+            .hero span { letter-spacing: 4px;}
+            .nav-meta { display: none; }
+            .skills-grid { grid-template-columns: 1fr; gap: 20px;}
         }
     </style>
 </head>
@@ -176,39 +209,39 @@
     <div class="container">
         <nav>
             <div class="logo">StzyWorks.</div>
-            <div style="font-size: 0.8rem; letter-spacing: 2px;">V 1.0</div>
+            <div class="nav-meta">SPECIALIST // V 1.1</div>
         </nav>
 
         <section class="hero">
             <span>Engineering Excellence</span>
             <h1>Digital Artisan <br>& AI Architect.</h1>
-            <p>Blending human creativity with machine intelligence. Specialized in AI-driven development and precision prompt engineering.</p>
+            <p>Blending human creativity with machine intelligence. Specialized in high-stakes AI-driven development and precision prompt engineering.</p>
             <div class="cta">
-                <a href="mailto:your@email.com" class="btn btn-primary">Start a Project</a>
+                <a href="mailto:your@email.com" class="btn btn-primary">Connect for Consultation</a>
             </div>
         </section>
 
-        <section id="work">
+        <section id="work" class="work">
             <h2 class="section-title">Capabilities</h2>
             <div class="skills-grid">
                 
                 <div class="skill-card">
                     <div class="badge">Development</div>
                     <h3>AI-Powered Coding</h3>
-                    <p>Leveraging LLMs to accelerate full-stack development. I focus on high-level architecture while utilizing AI to handle boilerplate, debugging, and optimization at scale.</p>
+                    <p>Utilizing high-context LLM interactions to architect clean, maintainable systems. Focused on high-level design while using AI to accelerate boilerplate, debugging, and edge-case testing at industrial speeds.</p>
                 </div>
 
                 <div class="skill-card">
-                    <div class="badge">Intelligence</div>
-                    <h3>Advanced Prompting</h3>
-                    <p>Crafting high-context logic chains that push AI models to their limits. Expert in structured outputs, iterative refinement, and zero-shot optimization without total dependency.</p>
+                    <div class="badge">Prompting</div>
+                    <h3>Advanced Logic Chains</h3>
+                    <p>Designing context-aware, structured prompt ecosystems for precise model outputs. Expert in chain-of-thought optimization, multi-step orchestration, and zero-shot precision across diverse AI models without model dependency.</p>
                 </div>
 
             </div>
         </section>
 
         <footer>
-            <p>&copy; 2026 StzyWorks // Built on Intelligence</p>
+            <p>&copy; 2026 STZYWORKS // APPLIED INTELLIGENCE // INDIA</p>
         </footer>
     </div>
 
